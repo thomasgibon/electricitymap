@@ -2,7 +2,7 @@
 """
 Created on Mon Nov 20 14:54:54 2017
 
-@author: Gibon
+@author: t.gibon@gmail.com
 """
 
 # The arrow library is used to handle datetimes
@@ -15,7 +15,7 @@ from datetime import datetime
 
 FUEL_MAP = {
         'FUEL_COAL':'coal',
-        'FUEL_EWIC':'UK->IE', # Imports seem to be accounted in the fuel mix
+        'FUEL_EWIC':'GB->IE', # Imports seem to be accounted in the fuel mix
         'FUEL_GAS' :'gas',
         'FUEL_OTHER_FOSSIL':'unknown',  # The Fuel Mix Graph is broken down into
                                         # Gas, Coal, Renewables, Oil, Net import
@@ -178,7 +178,7 @@ def fetch_price(country_code='IE', session=None):
     return data
 
 
-def fetch_exchange(country_code1='UK', country_code2='IE', session=None):
+def fetch_exchange(country_code1='GB', country_code2='IE', session=None):
     """Requests the last known power exchange (in MW) between two countries
     Arguments:
     country_code (optional) -- used in case a parser is able to fetch multiple countries
@@ -242,5 +242,5 @@ if __name__ == '__main__':
     print(fetch_production())
     print('fetch_price() ->')
     print(fetch_price())
-    print('fetch_exchange(UK, IE) ->')
-    print(fetch_exchange('UK', 'IE'))
+    print('fetch_exchange(GB, IE) ->')
+    print(fetch_exchange('GB', 'IE'))
